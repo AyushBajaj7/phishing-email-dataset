@@ -1,0 +1,11 @@
+pymongo==4.6.1
+numpy==1.26.4
+pandas==2.2.0
+scikit-learn==1.4.2
+nltk==3.8.1
+matplotlib==3.8.4
+seaborn==0.13.2
+python-dotenv==1.0.0
+
+# Python 3.14+ compatible
+# MongoDB Atlas requires IP whitelist registration (not SSL compatibility issue)
