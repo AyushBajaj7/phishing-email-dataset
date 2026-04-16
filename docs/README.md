@@ -12,7 +12,7 @@ This is a production-quality phishing detection pipeline implementing:
 ## Project Structure
 
 ```
-mongodb/
+phishing-email-dataset/
 ├── main.py                    # Core processing (preprocessing, feature extraction, process_email)
 ├── update_dataset.py          # Dataset updates with duplicate checking
 ├── database.py               # MongoDB connection and operations
@@ -21,9 +21,27 @@ mongodb/
 ├── models.py                 # Hybrid ML models (rule-based, Naive Bayes, Random Forest)
 ├── analytics.py              # Data analytics (imbalance, scaling, missing values)
 ├── dataset_generator.py      # Initial dataset creation (50-100 balanced samples)
-├── requirements.txt
-├── .env.example
-└── ARCHITECTURE_JUSTIFICATION.md  # Detailed justifications for every component
+├── predict.py                # Real-time email classification
+├── setup.py                  # Database initialization
+├── comprehensive_test.py     # Test suite for model evaluation
+├── requirements.txt          # Python dependencies
+├── .env.example              # Environment variables template
+├── docs/                     # Documentation folder
+│   ├── README.md             # This file - project overview
+│   ├── USAGE_GUIDE.md        # Complete usage guide
+│   ├── PREDICTION_THRESHOLDS.md  # Threshold and feature documentation
+│   ├── ARCHITECTURE_JUSTIFICATION.md  # Detailed component justifications
+│   └── TABLEAU_DASHBOARDS.md # Tableau dashboard specifications
+├── models/                   # Trained model artifacts
+│   ├── hybrid_rf_model.pkl   # Hybrid Random Forest model
+│   ├── naive_bayes_model.pkl # Naive Bayes model
+│   ├── tfidf_vectorizer.pkl  # TF-IDF vectorizer
+│   └── feature_scaler.pkl    # Feature scaler
+└── outputs/                  # Generated visualizations
+    ├── class_distribution.png
+    ├── confusion_matrix_hybrid_random_forest.png
+    ├── feature_importance.png
+    └── model_comparison.png
 ```
 
 ## Installation
